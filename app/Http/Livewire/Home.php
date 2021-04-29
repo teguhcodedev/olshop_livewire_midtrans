@@ -33,6 +33,7 @@ class Home extends Component
             'status'=>0,
            ]
         );
+        return Redirect()->route('belanja_user');
     }
 
 

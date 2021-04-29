@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 Route::get('/',[ \App\Http\Livewire\Home::class, '__invoke'])->name('home');
-Route::get('/TambahProduk',[ \App\Http\Livewire\TambahProduk::class, '__invoke'])->name('home');
+Route::get('/TambahProduk',[ \App\Http\Livewire\TambahProduk::class, '__invoke'])->name('tambah_produk');
+Route::get('/BelanjaUser',[ \App\Http\Livewire\BelanjaUser::class, '__invoke'])->name('belanja_user');
