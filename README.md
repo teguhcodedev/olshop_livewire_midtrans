@@ -42,3 +42,16 @@ table produk
 
 
 php artisan make:model Belanja -m
+
+php artisan make:livewire Home
+
+php artisan make:Livewire TambahProduk
+
+
+php artisan storage:link
+
+38:30
+
+php artisan make:livewire BelanjaUser
+
+PRT 4 9:40

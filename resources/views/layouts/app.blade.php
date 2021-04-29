@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <livewire:scripts/>
     <script
      src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false" data-turbo-eval="false">
     </script>
@@ -42,6 +43,13 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                        @if(Auth::user())
+                            @if(Auth::user()->level==0)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('BelanjaUser')}}">{{'Belanja Anda'}}</a>
+                                </li>
+                            @endif
+                            @endif
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

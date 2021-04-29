@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/',[ \App\Http\Livewire\Home::class, '__invoke'])->name('home');
+Route::get('/TambahProduk',[ \App\Http\Livewire\TambahProduk::class, '__invoke'])->name('home');
